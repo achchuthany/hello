@@ -8,10 +8,18 @@
     "@heroicons/react": "^2.0.18",
     "@material-tailwind/react": "^2.1.8",
     "gh-pages": "^6.1.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.1",
     "react-scripts": "^5.0.1",
     "web-vitals": "^2.1.4"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ]
   },
   "scripts": {
     "start": "react-scripts start",
@@ -27,7 +35,20 @@
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "shared-config"
+    ],
+    "rules": {
+      "additional-rule": "warn"
+    },
+    "overrides": [
+      {
+        "files": [
+          "**/*.ts?(x)"
+        ],
+        "rules": {
+          "additional-typescript-only-rule": "warn"
+        }
+      }
     ]
   },
   "browserslist": {
@@ -43,6 +64,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "eslint": "^8.55.0",
     "eslint-config-google": "^0.14.0",
     "eslint-config-prettier": "^9.1.0",
@@ -50,5 +72,10 @@
     "eslint-plugin-react": "^7.33.2",
     "prettier": "^3.1.1",
     "tailwindcss": "^3.3.6"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
