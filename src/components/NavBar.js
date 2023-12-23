@@ -57,7 +57,7 @@ const NavBar = () => {
     };
   }, []);
   return (
-    <Navbar className='mx-auto px-6 py-3 mt-3 bg-amber-300 border-amber-200' varient='gradient'>
+    <Navbar className='mx-auto px-6 py-3 mt-3 bg-gray-100 border-gray-1000' varient='gradient'>
       <div className='flex items-center justify-between text-blue-gray-900'>
         <Typography as='a' className='mr-4 cursor-pointer py-1.5' href='#' variant='h6'>
           Yogarajah Achchuthan
