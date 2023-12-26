@@ -1,46 +1,17 @@
 import { Collapse, IconButton, Navbar, Typography } from '@material-tailwind/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import Link from './Link';
 
 const NavList = () => {
   return (
     <ul className='my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6'>
-      <Typography as='li' className='p-1 font-medium' color='blue-gray' variant='small'>
-        <Link className='flex items-center hover:text-blue-800 transition-colors' to='/'>
-          Home
-        </Link>
-      </Typography>
-
-      <Typography as='li' className='p-1 font-medium' color='blue-gray' variant='small'>
-        <Link className='flex items-center hover:text-blue-800 transition-colors' to='/education'>
-          Education
-        </Link>
-      </Typography>
-
-      <Typography as='li' className='p-1 font-medium' color='blue-gray' variant='small'>
-        <a className='flex items-center hover:text-blue-800 transition-colors' href='#'>
-          Teachings
-        </a>
-      </Typography>
-
-      <Typography as='li' className='p-1 font-medium' color='blue-gray' variant='small'>
-        <a className='flex items-center hover:text-blue-800 transition-colors' href='#'>
-          Activities
-        </a>
-      </Typography>
-
-      <Typography as='li' className='p-1 font-medium' color='blue-gray' variant='small'>
-        <a className='flex items-center hover:text-blue-800 transition-colors' href='#'>
-          Roles
-        </a>
-      </Typography>
-
-      <Typography as='li' className='p-1 font-medium' color='blue-gray' variant='small'>
-        <a className='flex items-center hover:text-blue-800 transition-colors' href='#'>
-          Projects
-        </a>
-      </Typography>
+      <Link label={'Home'} path={'/'} />
+      <Link label={'Education'} path={'/education'} />
+      <Link label={'Teachings'} path={'/teachings'} />
+      <Link label={'Activities'} path={'/activities'} />
+      <Link label={'Roles'} path={'/roles'} />
+      <Link label={'Projects'} path={'/projects'} />
     </ul>
   );
 };
@@ -57,7 +28,7 @@ const NavBar = () => {
     };
   }, []);
   return (
-    <Navbar className='mx-auto px-6 py-3 mt-3 bg-gray-100 border-gray-1000' varient='gradient'>
+    <Navbar className='mx-auto px-6 py-3 mt-3 bg-gray-200' varient='gradient'>
       <div className='flex items-center justify-between text-blue-gray-900'>
         <Typography as='a' className='mr-4 cursor-pointer py-1.5' href='#' variant='h6'>
           Yogarajah Achchuthan
