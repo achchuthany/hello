@@ -28,8 +28,12 @@ const NavBar = () => {
     };
   }, []);
   return (
-    <Navbar className='mx-auto px-6 py-3 mt-3 bg-gray-200' varient='gradient'>
-      <div className='flex items-center justify-between text-blue-gray-900'>
+    <Navbar
+      variant='gradient'
+      color='blue-gray'
+      className='mx-auto from-blue-gray-900 to-blue-gray-800 px-4 py-3  mt-3 '
+    >
+      <div className='flex items-center justify-between text-white'>
         <Typography as='a' className='mr-4 cursor-pointer py-1.5' href='#' variant='h6'>
           Yogarajah Achchuthan
         </Typography>

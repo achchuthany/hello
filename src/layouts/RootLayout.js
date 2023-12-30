@@ -8,8 +8,8 @@ const RootLayout = () => {
     <>
       <div className='flex flex-col h-screen justify-between mx-auto '>
         <NavBar />
-        <main className='h-full'>
-          <div className='h-full container mx-auto px-6 py-3 mt-3'>
+        <main className='h-full mb-auto'>
+          <div className='h-full container mx-auto py-1 my-1'>
             <Outlet />
           </div>
         </main>
